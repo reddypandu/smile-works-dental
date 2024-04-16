@@ -13,7 +13,16 @@ body {
   font-size: 1.1rem;
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+.h1{
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+background: linear-gradient(30deg , white 40%,var(--primary-color) 20%);
+color: transparent !important;
+-webkit-background-clip: text;
+-webkit-text-stroke-width: 6px;
+letter-spacing: 3px;
 
+}
 ::-moz-selection {
   background: #000;
   color: #fff;
