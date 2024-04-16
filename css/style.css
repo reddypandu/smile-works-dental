@@ -322,7 +322,25 @@ background-color:var(--primary-color);
 .site-navbar {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
+.logo a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo a h2{
+  font-size: 16px;
+  letter-spacing: 10px;
+  color: black;
+}
+.logo a h2 span{
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: transparent;
+  background: rgba(255,255,255);
+  background:radial-gradient(circle, rgba(255,255,255,1) 7%, rgba(255,202,2,1) 54%);
+  -webkit-background-clip: text;
+}
 .site-navbar {
   margin-bottom: 0px;
   width: 100%;
