@@ -1262,7 +1262,11 @@ box-shadow: 5px 5px 20px var(--secondary-color), -5px -5px 20px var(--bg-dark);
 .block-25 ul li a:hover .text .heading {
   color: #fff;
 }
-
+.services h5{
+  color: var(--primary-color);
+  font-weight: 900;
+  font-size: 30px;
+    }
 #date-countdown .countdown-block {
   color: rgba(255, 255, 255, 0.4);
 }
