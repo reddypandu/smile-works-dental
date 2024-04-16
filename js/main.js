@@ -274,12 +274,28 @@ jQuery(document).ready(function($) {
 			items:1
 		},
 		768:{
-			items:2
+			items:1
 		},
 		992:{
 			items:1
 		}
 	}
+});
+const questions = document.querySelectorAll('.question');
+const plus = document.querySelectorAll(".plus");
+const answers = document.querySelectorAll('.answer'); // Select all answer elements
+
+questions.forEach((question, i) => {
+    question.addEventListener('click', () => {
+        answers.forEach((answer, index) => {
+            if (index !== i) { // If it's not the clicked question
+                answer.classList.remove('active'); // Deactivate all other answers
+                plus[index].classList.remove('active'); // Deactivate all other plus icons
+            }
+        });
+        question.nextElementSibling.classList.toggle('active'); // Toggle the active state of the clicked question's answer
+        plus[i].classList.toggle('active'); // Toggle the active state of the clicked question's plus icon
+    });
 });
 
 });
