@@ -328,6 +328,7 @@ background-color:var(--primary-color);
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(0, 0, 0, 0.5);
+  /* box-shadow: 2px 2px 4px var(--primary-color); */
 }
 
 .site-navbar .site-logo {
@@ -345,12 +346,14 @@ background-color:var(--primary-color);
 
 .site-navbar .site-navigation .site-menu .active>a {
   color: #fff;
+
 }
 
 .site-navbar .site-navigation .site-menu a {
   text-decoration: none !important;
   font-size: 15px;
   display: inline-block;
+  font-weight: 600;
 }
 
 .site-navbar .site-navigation .site-menu>li {
