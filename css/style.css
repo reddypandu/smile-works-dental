@@ -840,7 +840,7 @@ width: 50px;
   color: var(--primary-color);
 }
 
-.service-heading{
+.services-headings{
 background-color: var(--primary-color);
 padding-block: 2rem;
 color: var(--bg-dark);
