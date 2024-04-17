@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 
 <body>
@@ -203,6 +205,7 @@
     <div class="site-section site-block-appointment">
       <div class="container">
         <div class="row">
+          
           <!-- <div
             class="col-lg-6 wow zoomIn"
             data-wow-delay="0.3s"
@@ -212,12 +215,12 @@
               class="twentytwenty-container position-relative h-100 rounded overflow-hidden"
             >
               <img
-                class="position-absolute w-100 h-100"
+                class="position-absolute w-100 h-100 img1"
                 src="images/img_1.jpg"
                 style="object-fit: cover"
               />
               <img
-                class="position-absolute w-100 h-100"
+                class="position-absolute w-100 h-100 img2"
                 src="images/img_2.jpg"
                 style="object-fit: cover"
               />
@@ -291,14 +294,80 @@
         </div>
       </div>
     </div>
+    <div class="gallery">
+      <img src="./images/img_11.jpg" alt="a hot air balloon">
+      <img src="./images/img_2.jpg" alt="a sky photo of an old city">
+     
+    </div>
 
-    <!-- <div class="promo py-5 bg-primary">
-      <div class="container text-center">
-        <span class="d-block h4 mb-3 font-weight-light text-white">Promo For Tooth Cleaning from <del>$140.00</del> now <strong class="font-weight-bold">$50.00</strong></span>
-        <div id="date-countdown" class="mt-0"></div>
-      </div>
-    </div> -->
 
+
+    <style>
+   .gallery {
+  --g: 8px;   /* the gap */
+  --s: 400px; /* the size */
+  display: grid;
+  border-radius: 50%;
+}
+
+.gallery > img {
+  grid-area: 1/1;
+  width: 400px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transform: translate(var(--_x,0),var(--_y,0));
+  cursor: pointer;
+  z-index: 0;
+  transition: .3s, z-index 0s .3s;
+}
+
+.gallery > img:nth-child(1) {
+  clip-path: polygon(50% 0%, 50% 50%, 50% 50%, 50% 100%, 0 100%, 0% 50%, 0 0);
+}
+
+.gallery > img:nth-child(2) {
+  clip-path: polygon(48% 0, 100% 0, 100% 49%, 100% 100%, 48% 100%, 48% 49%, 48% 49%);
+}
+
+.gallery > img:nth-child(1):hover {
+  clip-path: unset;
+  opacity: 1;
+  z-index: 1; /* Ensure the first image is on top when hovered */
+}
+
+.gallery > img:nth-child(2):hover {
+  clip-path: unset;
+  opacity: 1;
+  z-index: 1; /* Ensure the second image is on top when hovered */
+}
+
+.gallery > img:hover {
+  transform: translate(0,0);
+}
+
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #3B8686;
+}
+    </style>
+<script>
+  $(document).ready(function() {
+  $('.combined-images-container').on('scroll', function() {
+    var scrollLeft = $(this).scrollLeft();
+    // Hide second image when scrolling left
+    if (scrollLeft > 0) {
+      $('.img2').css('opacity', '0');
+    } else {
+      $('.img2').css('opacity', '1');
+    }
+  });
+});
+</script>
 
     <div class="site-section bg-light services">
       <div class="container">
@@ -786,10 +855,8 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/aos.js"></script>
-    <script src="js/twenty1.js"></script>
-<script src="js/twenty.js"></script>
-    <script src="js/main.js"></script>
-
+   
+   
 </body>
 
 </html>

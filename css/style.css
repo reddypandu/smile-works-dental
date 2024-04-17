@@ -127,9 +127,9 @@ a:hover {
   background: #000;
 }
 .heading{
-  margin-top: 50px;
+  /* margin-top: 50px;
   background-color:yellow;
-  padding: 20px;
+  padding: 20px; */
   
   
 }
@@ -812,7 +812,7 @@ width: 50px;
 .site-blocks-cover,
 .site-blocks-cover .row {
   min-height: 400px;
-  height: calc(60vh);
+  height: calc(100vh);
 }
 
 .site-blocks-cover.inner-page,
