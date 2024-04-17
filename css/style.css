@@ -123,6 +123,19 @@ a:hover {
 .bg-black {
   background: #000;
 }
+.heading{
+  margin-top: 50px;
+  background-color:yellow;
+  padding: 20px;
+  
+  
+}
+.heading333{
+  margin-top: 50px;
+  background-color:yellow;
+  padding: 20px;
+  
+}
 
 .form-control {
   height: 47px;
