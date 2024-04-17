@@ -11,9 +11,12 @@ body {
   color: #4d4d4d;
   font-weight: 300;
   font-size: 1.1rem;
-  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-.h1{
+ scroll-behavior: smooth;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";}
+
+
+
+  .h1{
   font-size: 3.5rem !important;
   font-weight: 700 !important;
 background: linear-gradient(30deg , white 40%,var(--primary-color) 20%);
@@ -481,7 +484,7 @@ width: 50px;
   padding: 0px 0;
   margin-top: 20px;
   margin-left: 0px;
-  background: #fff;
+  background: var(--primary-color);
   -webkit-transition: 0.2s 0s;
   -o-transition: 0.2s 0s;
   transition: 0.2s 0s;
@@ -520,7 +523,8 @@ width: 50px;
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown .active>a {
-  color: #fff !important;
+  color: var(--primary-color) !important;
+  background: var(--secondary-color);
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown>li {
@@ -794,14 +798,14 @@ width: 50px;
 
 .site-blocks-cover,
 .site-blocks-cover .row {
-  min-height: 600px;
-  height: calc(100vh);
+  min-height: 400px;
+  height: calc(60vh);
 }
 
 .site-blocks-cover.inner-page,
 .site-blocks-cover.inner-page .row {
-  min-height: 600px;
-  height: calc(80vh);
+  min-height: 500px;
+  height: calc(0vh);
 }
 
 .site-blocks-cover .sub-text {
@@ -812,7 +816,7 @@ width: 50px;
 }
 
 .site-blocks-cover h1 {
-  font-weight: 900;
+  font-weight: 300;
   color: var(--bg-dark);
   text-transform: uppercase;
   font-size: 3rem;
@@ -823,14 +827,23 @@ width: 50px;
   color: var(--primary-color);
 }
 
-@media (min-width: 768px) {
-  .site-blocks-cover h1 {
-    font-size: 5rem;
-    font-weight: 300;
-    line-height: 1.2;
-  }
+.service-heading{
+background-color: var(--primary-color);
+padding-block: 2rem;
+color: var(--bg-dark);
+letter-spacing: 2px;
+text-transform: uppercase;
 }
+.gallery .img{
 
+height: 300px;
+}
+.gallery .img img{
+width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  padding: 5px;
+}
 .site-blocks-cover p {
   color: #fff;
   font-size: 1.5rem;
@@ -862,7 +875,23 @@ width: 50px;
 .site-block-1 {
   padding-top: 50px;
 }
-
+@media (min-width: 768px) {
+  .site-blocks-cover h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 575px) {
+  .site-blocks-cover h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1;
+  }
+  .site-blocks-cover p{
+    font-size: 1rem;
+  }
+}
 @media (min-width: 992px) {
   .site-block-1 {
     padding-top: 0;
@@ -1401,6 +1430,11 @@ font-weight: 600;
 .faq-about-plan-area  .heading h2{
   font-size: 3rem;
   color: white;
+  cursor: pointer;
+}
+
+.accordion-button{
+  cursor: pointer;
 }
 .faq-about-plan-area .heading strong{
 color:var(--primary-color);
@@ -1831,3 +1865,24 @@ color:var(--primary-color);
   border-top: 6px solid white;
   bottom: 50%;
   margin-bottom: -17px; }
+
+  #topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  /* Style for the button when hovering */
+  #topBtn:hover {
+    background-color: var(--bg-dark);
+  }
