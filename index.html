@@ -108,9 +108,8 @@
         </div>
       </div>
     </div>
-<style>
+  </div>
 
-</style>
     <div class="site-blocks-cover" style="background-image: url(images/hero-section.jpg);" data-aos="fade"
       data-stellar-background-ratio="0.5">
       <div class="container">
@@ -118,8 +117,6 @@
           <div class="col-md-7">
             <span class="sub-text">Elevate your smile’s with our</span>
             <h1 class="h1"> Best Dental Clinic in Manikonda</h1>
-
-         
           </div>
         </div>
       </div>
@@ -294,28 +291,41 @@
         </div>
       </div>
     </div>
+    <div class="be">
+<p>Before</p>
+   
     <div class="gallery">
-      <img src="./images/img_11.jpg" alt="a hot air balloon">
-      <img src="./images/img_2.jpg" alt="a sky photo of an old city">
-     
+        <img src="./images/img_11.jpg" alt="a hot air balloon">
+        <img src="./images/img_2.jpg" alt="a sky photo of an old city">
     </div>
-
-
+    <p>After</p>
+  </div>
 
     <style>
+      .be{
+position: relative;
+display: flex;
+justify-content: center;
+
+      }
+      .be p{
+        position: absolute;
+        left: 0;
+      }
    .gallery {
-  --g: 8px;   /* the gap */
-  --s: 400px; /* the size */
   display: grid;
   border-radius: 50%;
+  /* position: relative;
+  text-align: center; */
 }
-
+/* .gallery p{
+  position: absolute;
+} */
 .gallery > img {
   grid-area: 1/1;
   width: 400px;
   aspect-ratio: 1;
   object-fit: cover;
-
   cursor: pointer;
   z-index: 0;
   transition: .3s, z-index 0s .3s;
@@ -352,7 +362,7 @@ body {
   min-height: 100vh;
   display: grid;
   place-content: center;
-  background: #3B8686;
+ 
 }
     </style>
 <script>
@@ -856,7 +866,24 @@ body {
     <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/aos.js"></script>
    
-   
+   <script>
+  const questions = document.querySelectorAll('.question');
+  const plus = document.querySelectorAll(".plus");
+  const answers = document.querySelectorAll('.answer'); // Select all answer elements
+  
+  questions.forEach((question, i) => {
+	  question.addEventListener('click', () => {
+		  answers.forEach((answer, index) => {
+			  if (index !== i) { // If it's not the clicked question
+				  answer.classList.remove('active'); // Deactivate all other answers
+				  plus[index].classList.remove('active'); // Deactivate all other plus icons
+			  }
+		  });
+		  question.nextElementSibling.classList.toggle('active'); // Toggle the active state of the clicked question's answer
+		  plus[i].classList.toggle('active'); // Toggle the active state of the clicked question's plus icon
+	  });
+  });
+   </script>
 </body>
 
 </html>
